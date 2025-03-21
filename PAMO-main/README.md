@@ -1,0 +1,1 @@
+PAMO zad_1
