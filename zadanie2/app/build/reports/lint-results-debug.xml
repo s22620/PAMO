@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.9.0">
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        String formattedBmi = String.format(&quot;%.2f&quot;, bmi);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\java\com\example\bmicalculator\BmiFragment.java"
+            line="56"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            resultText.setText(String.format(&quot;Daily Caloric Needs: %.2f kcal&quot;, dailyCalories));"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\java\com\example\bmicalculator\KcalCalculatorFragment.java"
+            line="66"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        severity="Fatal"
+        message="`KcalCalculatorFragment` must extend android.app.Activity"
+        category="Correctness"
+        priority="6"
+        summary="Registered class is not instantiatable"
+        explanation="Activities, services, broadcast receivers etc. registered in the manifest file (or for custom views, in a layout file) must be &quot;instantiatable&quot; by the system, which means that the class must be public, it must have an empty public constructor, and if it&apos;s an inner class, it must be a static inner class.&#xA;&#xA;If you use a custom `AppComponentFactory` to instantiate app components yourself, consider disabling this Lint issue in order to avoid false positives."
+        errorLine1="            android:name=&quot;.KcalCalculatorFragment&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\AndroidManifest.xml"
+            line="16"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        severity="Warning"
+        message="A newer version of com.android.application than 8.9.0 is available: 8.9.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Android Gradle Plugin Version"
+        explanation="This detector looks for usage of the Android Gradle Plugin where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        severity="Warning"
+        message="A newer version of com.android.application than 8.9.0 is available: 8.9.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Android Gradle Plugin Version"
+        explanation="This detector looks for usage of the Android Gradle Plugin where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        severity="Warning"
+        message="A newer version of com.android.application than 8.9.0 is available: 8.9.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Android Gradle Plugin Version"
+        explanation="This detector looks for usage of the Android Gradle Plugin where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="agp = &quot;8.9.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core than 1.12.0 is available: 1.15.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="core = &quot;1.12.0&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="3"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core than 1.12.0 is available: 1.15.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="core = &quot;1.12.0&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="3"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core than 1.12.0 is available: 1.15.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="core = &quot;1.12.0&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="3"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-splashscreen than 1.0.0 is available: 1.0.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="coreSplashscreenVersion = &quot;1.0.0&quot;"
+        errorLine2="                          ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="5"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-splashscreen than 1.0.0 is available: 1.0.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="coreSplashscreenVersion = &quot;1.0.0&quot;"
+        errorLine2="                          ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="5"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-splashscreen than 1.0.0 is available: 1.0.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="coreSplashscreenVersion = &quot;1.0.0&quot;"
+        errorLine2="                          ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="5"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="appcompat = &quot;1.6.1&quot;"
+        errorLine2="            ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="appcompat = &quot;1.6.1&quot;"
+        errorLine2="            ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="appcompat = &quot;1.6.1&quot;"
+        errorLine2="            ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.material:material than 1.10.0 is available: 1.12.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="material = &quot;1.10.0&quot;"
+        errorLine2="           ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.material:material than 1.10.0 is available: 1.12.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="material = &quot;1.10.0&quot;"
+        errorLine2="           ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.material:material than 1.10.0 is available: 1.12.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="material = &quot;1.10.0&quot;"
+        errorLine2="           ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="constraintlayout = &quot;2.1.4&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="12"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="constraintlayout = &quot;2.1.4&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="12"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="constraintlayout = &quot;2.1.4&quot;"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="12"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose:compose-bom than 2024.09.00 is available: 2025.03.01"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="composeBom = &quot;2024.09.00&quot;"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose:compose-bom than 2024.09.00 is available: 2025.03.01"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="composeBom = &quot;2024.09.00&quot;"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose:compose-bom than 2024.09.00 is available: 2025.03.01"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="composeBom = &quot;2024.09.00&quot;"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="18"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        severity="Information"
+        message="There are multiple dependencies androidx.core:core-splashscreen but with different version"
+        category="Correctness"
+        priority="4"
+        summary="Multiple Versions Gradle Dependency"
+        explanation="This detector looks for usages of libraries when name and group are the same but versions are different. Using multiple versions in big project is fine, and there are cases where you deliberately want to stick with such approach. However, you may simply not be aware that this situation happens, and that is what this lint check helps find."
+        errorLine1="core-splashscreen = { module = &quot;androidx.core:core-splashscreen&quot;, version.ref = &quot;coreSplashscreen&quot; }"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="23"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        severity="Information"
+        message="There are multiple dependencies androidx.core:core-splashscreen but with different version"
+        category="Correctness"
+        priority="4"
+        summary="Multiple Versions Gradle Dependency"
+        explanation="This detector looks for usages of libraries when name and group are the same but versions are different. Using multiple versions in big project is fine, and there are cases where you deliberately want to stick with such approach. However, you may simply not be aware that this situation happens, and that is what this lint check helps find."
+        errorLine1="core-splashscreen = { module = &quot;androidx.core:core-splashscreen&quot;, version.ref = &quot;coreSplashscreen&quot; }"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="23"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        severity="Information"
+        message="There are multiple dependencies androidx.core:core-splashscreen but with different version"
+        category="Correctness"
+        priority="4"
+        summary="Multiple Versions Gradle Dependency"
+        explanation="This detector looks for usages of libraries when name and group are the same but versions are different. Using multiple versions in big project is fine, and there are cases where you deliberately want to stick with such approach. However, you may simply not be aware that this situation happens, and that is what this lint check helps find."
+        errorLine1="core-splashscreen = { module = &quot;androidx.core:core-splashscreen&quot;, version.ref = &quot;coreSplashscreen&quot; }"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="23"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        severity="Information"
+        message="There are multiple dependencies androidx.core:core-splashscreen but with different version"
+        category="Correctness"
+        priority="4"
+        summary="Multiple Versions Gradle Dependency"
+        explanation="This detector looks for usages of libraries when name and group are the same but versions are different. Using multiple versions in big project is fine, and there are cases where you deliberately want to stick with such approach. However, you may simply not be aware that this situation happens, and that is what this lint check helps find."
+        errorLine1="core-splashscreen-v100 = { module = &quot;androidx.core:core-splashscreen&quot;, version.ref = &quot;coreSplashscreenVersion&quot; }"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="24"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        severity="Information"
+        message="There are multiple dependencies androidx.core:core-splashscreen but with different version"
+        category="Correctness"
+        priority="4"
+        summary="Multiple Versions Gradle Dependency"
+        explanation="This detector looks for usages of libraries when name and group are the same but versions are different. Using multiple versions in big project is fine, and there are cases where you deliberately want to stick with such approach. However, you may simply not be aware that this situation happens, and that is what this lint check helps find."
+        errorLine1="core-splashscreen-v100 = { module = &quot;androidx.core:core-splashscreen&quot;, version.ref = &quot;coreSplashscreenVersion&quot; }"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="24"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        severity="Information"
+        message="There are multiple dependencies androidx.core:core-splashscreen but with different version"
+        category="Correctness"
+        priority="4"
+        summary="Multiple Versions Gradle Dependency"
+        explanation="This detector looks for usages of libraries when name and group are the same but versions are different. Using multiple versions in big project is fine, and there are cases where you deliberately want to stick with such approach. However, you may simply not be aware that this situation happens, and that is what this lint check helps find."
+        errorLine1="core-splashscreen-v100 = { module = &quot;androidx.core:core-splashscreen&quot;, version.ref = &quot;coreSplashscreenVersion&quot; }"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\gradle\libs.versions.toml"
+            line="24"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_bmi.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;28dp&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_bmi.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;48dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_diet_recomendation.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;34dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_kcal_calculator.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DataBindingWithoutKapt"
+        severity="Warning"
+        message="If you plan to use data binding in a Kotlin project, you should apply the kotlin-kapt plugin."
+        category="Correctness"
+        priority="1"
+        summary="Data Binding without Annotation Processing"
+        explanation="Apps that use Kotlin and data binding should also apply the kotlin-kapt plugin."
+        url="https://kotlinlang.org/docs/reference/kapt.html"
+        urls="https://kotlinlang.org/docs/reference/kapt.html"
+        errorLine1="        dataBinding = true"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\build.gradle"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.black` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;black&quot;>#FF000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\values\colors.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.run_logo_50dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:height=&quot;50dp&quot; android:viewportHeight=&quot;511.99&quot; android:viewportWidth=&quot;511.99&quot; android:width=&quot;50dp&quot;>"
+        errorLine2="^">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\drawable\run_logo_50dp.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.Theme_BMICalculator` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;style name=&quot;Theme.BMICalculator&quot; parent=&quot;Base.Theme.BMICalculator&quot; />"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\values\themes.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        severity="Warning"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Hyphen can be replaced with dash"
+        explanation="The &quot;n dash&quot; (\u2013, &amp;#8211;) and the &quot;m dash&quot; (\u2014, &amp;#8212;) characters are used for ranges (n dash) and breaks (m dash). Using these instead of plain hyphens can make text easier to read and your application will look more polished."
+        url="https://en.wikipedia.org/wiki/Dash"
+        urls="https://en.wikipedia.org/wiki/Dash"
+        errorLine1="        &lt;item>Light (1-3 days/week)&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\values\spinnerValues.xml"
+            line="5"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        severity="Warning"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Hyphen can be replaced with dash"
+        explanation="The &quot;n dash&quot; (\u2013, &amp;#8211;) and the &quot;m dash&quot; (\u2014, &amp;#8212;) characters are used for ranges (n dash) and breaks (m dash). Using these instead of plain hyphens can make text easier to read and your application will look more polished."
+        url="https://en.wikipedia.org/wiki/Dash"
+        urls="https://en.wikipedia.org/wiki/Dash"
+        errorLine1="        &lt;item>Moderate (3-5 days/week)&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\values\spinnerValues.xml"
+            line="6"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        severity="Warning"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Hyphen can be replaced with dash"
+        explanation="The &quot;n dash&quot; (\u2013, &amp;#8211;) and the &quot;m dash&quot; (\u2014, &amp;#8212;) characters are used for ranges (n dash) and breaks (m dash). Using these instead of plain hyphens can make text easier to read and your application will look more polished."
+        url="https://en.wikipedia.org/wiki/Dash"
+        urls="https://en.wikipedia.org/wiki/Dash"
+        errorLine1="        &lt;item>Active (6-7 days/week)&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\values\spinnerValues.xml"
+            line="7"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_bmi.xml"
+            line="26"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_bmi.xml"
+            line="38"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_kcal_calculator.xml"
+            line="24"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_kcal_calculator.xml"
+            line="36"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\res\layout\fragment_kcal_calculator.xml"
+            line="48"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        resultNumber.setText(getString(R.string.bmi) + &quot;: &quot; + formattedBmi);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\dagma\AndroidStudioProjects\PAMO-UNI\BMICalculator\app\src\main\java\com\example\bmicalculator\BmiFragment.java"
+            line="58"
+            column="30"/>
+    </issue>
+
+</issues>

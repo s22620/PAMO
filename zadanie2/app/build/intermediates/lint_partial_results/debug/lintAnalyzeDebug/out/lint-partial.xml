@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.bmicalculator.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.black"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="24"
+            endOffset="74"/>
+        <location id="R.drawable.run_logo_50dp"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/run_logo_50dp.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="53"
+            endColumn="10"
+            endOffset="6383"/>
+        <location id="R.style.Theme_BMICalculator"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="8"
+            column="12"
+            startOffset="335"
+            endLine="8"
+            endColumn="38"
+            endOffset="361"/>
+        <entry
+            name="model"
+            string="array[activity_levels(U)],color[black(D),white(U)],drawable[baseline_analytics_24(U),baseline_boy_24(U),baseline_fastfood_24(U),ic_launcher_background(U),ic_launcher_foreground(U),ic_launcher_foreground_1(R),logo_small(U),run_logo_50dp(D)],id[main(U),nav_host_fragment(U),nav_view(U),textView(U),weightInput(U),heightInput(U),weightLabel(D),heightLabel(D),button(U),resultNumber(U),resultText(U),recommendationText(U),di_title(D),KcalCalcTitle(U),kc_ageInput(U),kc_weightInput(U),kc_heightInput(U),kc_activityInput(U),kc_calculateButton(U),kc_resultText(U),kc_ageInput_label(D),kc_weightInput_label(D),kc_heightInput_label(D),kc_activityInput_label(D),bmiFragment(U),kcalCalculatorFragment(U),dietRecomendationFragment(U),mobile_navigation(D)],layout[activity_main(U),fragment_bmi(U),fragment_diet_recomendation(U),fragment_kcal_calculator(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],navigation[mobile_navigation(U)],string[app_name(U),title_activity_kcal_calculator(U),weight(U),height(U),calculate(U),diets(U),kcal_calc(U),age(U),activity(U),underweight(U),optimal(U),overweight(U),bmi(U),please_enter_both_height_and_weight(U),invalid_input(U)],style[SplashTheme(U),Base_Theme_BMICalculator(U),Theme_Material3_DayNight_NoActionBar(R),Theme_BMICalculator(D),Theme_SplashScreen(R)],xml[data_extraction_rules(U),backup_rules(U)];7^8,27^d^2e^2b,28^2f^e^f^31^10^32^33^13^14,29^34,2a^35^18^19^1a^1b^33^1c^1d^36^31^32^37,2b^4^2f^3^35^5^34,2c^6^7,2d^6^7,2e^23^28^2a^29,3e^42^2^9^3f,3f^40,41^3f;;;"/>
+    </map>
+
+</incidents>

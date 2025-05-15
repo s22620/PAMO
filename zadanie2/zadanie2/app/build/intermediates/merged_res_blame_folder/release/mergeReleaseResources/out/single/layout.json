@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.bmicalculator.app-mergeReleaseResources-67:/layout/activity_main.xml",
+        "source": "com.example.bmicalculator.app-main-69:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.bmicalculator.app-mergeReleaseResources-67:/layout/fragment_kcal_calculator.xml",
+        "source": "com.example.bmicalculator.app-main-69:/layout/fragment_kcal_calculator.xml"
+    },
+    {
+        "merged": "com.example.bmicalculator.app-mergeReleaseResources-67:/layout/fragment_bmi.xml",
+        "source": "com.example.bmicalculator.app-main-69:/layout/fragment_bmi.xml"
+    },
+    {
+        "merged": "com.example.bmicalculator.app-mergeReleaseResources-67:/layout/fragment_diet_recomendation.xml",
+        "source": "com.example.bmicalculator.app-main-69:/layout/fragment_diet_recomendation.xml"
+    }
+]
