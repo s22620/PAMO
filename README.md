@@ -1,7 +1,5 @@
 # PAMO
 
-zad_1
-
 zad_2
 
 <img width="251" alt="intro" src="https://github.com/user-attachments/assets/33ae075d-aed0-41c5-989b-e25c58050ba7" />
