@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bmiFragment"
+        android:icon="@drawable/baseline_boy_24"
+        android:title="@string/app_name" />
+
+    <item
+        android:id="@+id/kcalCalculatorFragment"
+        android:icon="@drawable/baseline_functions_24"
+        android:title="@string/kcal_calc" />
+
+    <item
+        android:id="@+id/dietRecomendationFragment"
+        android:icon="@drawable/baseline_fastfood_24"
+        android:title="@string/diets" />
+
+    <item
+        android:id="@+id/shoppingList"
+        android:icon="@drawable/baseline_check_box_24"
+        android:title="Zakupy" />
+
+    <item
+        android:id="@+id/BMIChartActivity"
+        android:icon="@drawable/baseline_add_chart_24"
+        android:title="BMI Chart" />
+
+</menu>
